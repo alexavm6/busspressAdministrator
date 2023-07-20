@@ -8,7 +8,7 @@ const User = require('../models/User');
 
 const Car = require('../models/Car');
 const CarScheduleDrivers = require('../models/CarScheduleDrivers');
-const CarScheduleUsers = require('../models/CarScheduleUsers');
+const CarScheduleUsers = require('../models/CarScheduleUser');
 const ClassSchedule = require('../models/ClassSchedule');
 const Driver = require('../models/Driver');
 const DriverPerCar = require('../models/DriverPerCar');

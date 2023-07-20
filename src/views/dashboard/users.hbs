@@ -1,0 +1,117 @@
+
+
+
+<! ––Autores: Vasquez Miguel, Alexandra Ivana & Barandiaran Japaja, Jhossepy Alexander & Marquez Mendez, Andrea Janet.––>
+<! ––muestra vista de rutas del usuario––>
+
+<section class="card ajuste80">
+<div class="card-body">
+    <h1>Usuarios Globales</h1>
+
+    <br>
+
+    <h3>Usuarios Subidos</h3>
+    <hr>
+    <table class="table">
+            <thead>
+                <tr>
+                
+                <th scope="col">Usuario</th>
+                <th scope="col">Tipo de Documento</th>
+                <th scope="col">Numero de Documento</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Sede</th>
+                <th scope="col">Número Telefónico</th>
+                <th scope="col">Carrera</th>
+                <th scope="col">Ciclo</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each institutionStudents}}
+                <tr>
+                
+                <td>{{user}}</td>
+                <td>{{document_type}}</td>
+                <td>{{document_number}}</td>
+                <td>{{names}}</td>
+                <td>{{last_names}}</td>
+                <td>{{email}}</td>
+                <td>{{address}}</td>
+                <td>{{campus}}</td>
+                <td>{{phone_number}}</td>
+                <td>{{college_career}}</td>
+                <td>{{course}}</td>
+                <td>{{gender}}</td>
+                <td>{{age}}</td>
+                
+                </tr>
+            {{/each}}
+            </tbody>
+            </table>
+
+    <p></p>
+
+    <h3>Usuarios Inscritos</h3>
+    <hr>
+    <table class="table">
+            <thead>
+                <tr>
+                
+                <th scope="col">Usuario</th>
+                <th scope="col">Tipo de Documento</th>
+                <th scope="col">Numero de Documento</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Sede</th>
+                <th scope="col">Número Telefónico</th>
+                <th scope="col">Carrera</th>
+                <th scope="col">Ciclo</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Edad</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            {{#each users}}
+                <tr>
+                
+                <td>{{user}}</td>
+                <td>{{document_type}}</td>
+                <td>{{document_number}}</td>
+                <td>{{names}}</td>
+                <td>{{last_names}}</td>
+                <td>{{email}}</td>
+                <td>{{address}}</td>
+                <td>{{campus}}</td>
+                <td>{{phone_number}}</td>
+                <td>{{college_career}}</td>
+                <td>{{course}}</td>
+                <td>{{gender}}</td>
+                <td>{{age}}</td>
+                
+                </tr>
+            {{/each}}
+            </tbody>
+            </table>
+    
+   
+
+
+    
+
+
+
+
+</div>
+</section>
+
+
+
+

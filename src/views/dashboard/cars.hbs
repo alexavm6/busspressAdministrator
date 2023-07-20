@@ -1,0 +1,36 @@
+<! ––Autores: Vasquez Miguel, Alexandra Ivana & Barandiaran Japaja, Jhossepy Alexander & Marquez Mendez, Andrea Janet.––>
+<! ––muestra vista para valorar a los conductores––>
+
+
+<section class="card ajuste">
+<div class="card-body">
+    <h1>Carros Globales</h1>
+    
+    <br>
+
+    
+
+    {{#each carsArray}}
+        <div class="card">
+        <h5 class="card-header">Carro {{institution_car_id.license_plate_number}}</h5>
+        <div class="card-body">
+            <p class="card-text">Conductor: {{driver_in_service_id.names}}, {{driver_in_service_id.last_names}}</p>
+        </div>
+        </div>
+    {{/each}}
+
+
+
+
+
+    
+
+
+
+
+</div>
+</section>
+
+
+
+

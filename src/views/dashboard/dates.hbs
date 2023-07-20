@@ -1,0 +1,81 @@
+
+
+
+<! ––Autores: Vasquez Miguel, Alexandra Ivana & Barandiaran Japaja, Jhossepy Alexander & Marquez Mendez, Andrea Janet.––>
+<! ––muestra vista de rutas del usuario––>
+
+<section class="card ajuste">
+<div class="card-body">
+    <h1>Fechas Globales</h1>
+
+    <br>
+
+    <h3>Fechas donde las rutas se generan</h3>
+    <hr>
+    <table class="table">
+            <thead>
+                <tr>
+                
+                <th scope="col">Ciclo</th>
+                <th scope="col">Fecha de LLenado</th>
+                <th scope="col">Generar Rutas</th>
+                <th scope="col">Fecha de Borrado</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each daysCodeRunsByInstitution}}
+                <tr>
+                
+                <td>{{cycle}}</td>
+                <td>{{fill_day}}</td>
+                <td><a href="/dashboard/firstSteps"><button type="button" class="btn btn-info">Generar</button></a></td>
+                <td>{{delete_day}}</td>
+                
+                </tr>
+            {{/each}}
+            </tbody>
+            </table>
+
+    <p></p>
+
+    <h3>Fechas de ciclos institucionales</h3>
+    <hr>
+    <table class="table">
+            <thead>
+                <tr>
+                
+                <th scope="col">Ciclo</th>
+                <th scope="col">Fecha de Inicio de Ciclo</th>
+                
+                <th scope="col">Fecha de Fin de Ciclo</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each cycleSchedulesByInstitution}}
+                <tr>
+                
+                <td>{{cycle}}</td>
+                <td>{{cycle_start}}</td>
+                
+                
+                <td>{{cycle_end}}</td>
+                
+                </tr>
+            {{/each}}
+            </tbody>
+            </table>
+    
+   
+
+
+    
+
+
+
+
+</div>
+</section>
+
+
+
+

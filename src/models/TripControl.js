@@ -1,13 +1,14 @@
 //Autores: Vasquez Miguel, Alexandra Ivana & Barandiaran Japaja, Jhossepy Alexander & Marquez Mendez, Andrea Janet.
 
 //importa el schema y modelo de moongose
-const {Schema, model} = require('mongoose');
+const {Schema, model, SchemaTypes} = require('mongoose');
 
 //Crea un schema para mongodb
 const TripControlSchema = new Schema({
-    user_id: {
-        type: String,
-        required: true
+    user_id:  {
+        type: SchemaTypes.ObjectId,
+        required: true,
+        ref: "User"
     },
     total_trips:  {
         type: Number,

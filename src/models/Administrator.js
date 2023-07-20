@@ -5,24 +5,24 @@ const {Schema, model, SchemaTypes} = require('mongoose');
 const bcrypt = require('bcryptjs'); 
 
 //Crea un schema para mongodb
-const DriverInServiceSchema = new Schema({
+const AdministratorSchema = new Schema({
     user: {
         type: String,
         required: true
     },
-    document_type: {
+    document_type:  {
         type: String,
         required: true
     },
-    document_number: {
+    document_number:  {
         type: String,
         required: true
     },
-    names: {
+    names:  {
         type: String,
         required: true
     },
-    last_names: {
+    last_names:  {
         type: String,
         required: true
     },
@@ -30,34 +30,23 @@ const DriverInServiceSchema = new Schema({
         type: String,
         required: true
     },
-    password: {
+    password:  {
         type: String,
         required: true
     },
-    address: {
+    address:  {
         type: String,
         required: true
     },
-    phone_number: {
+    phone_number:  {
         type: String,
         required: true
     },
     gender: {
-        type: String,
-        required: true
+        type: String
     },
     age: {
-        type: Number,
-        required: true
-    },
-    score: {
-        type: Number,
-        required: true
-    },
-    institution_id:  {
-        type: SchemaTypes.ObjectId,
-        required: true,
-        ref: "Institution"
+        type: Number
     }
 },
 {
@@ -65,15 +54,16 @@ const DriverInServiceSchema = new Schema({
 });
 
 //coloca meotodos de encriptacion de password al schema
-DriverInServiceSchema.methods.encryptPassword = async password => {
+AdministratorSchema.methods.encryptPassword = async password => {
     const salt = await bcrypt.genSalt(10);
     return await bcrypt.hash(password, salt);
 };
 
-DriverInServiceSchema.methods.matchPassword = async function(password) {
+AdministratorSchema.methods.matchPassword = async function(password) {
     return await bcrypt.compare(password, this.password);
 }
 
+
 //crea un modelo con el nombre elegido y la coleccion donde se guardará
-module.exports = model('DriverInService', DriverInServiceSchema, 'driversInService');
+module.exports = model('Administrator', AdministratorSchema, 'administrators');
 

@@ -1,25 +1,31 @@
 //Autores: Vasquez Miguel, Alexandra Ivana & Barandiaran Japaja, Jhossepy Alexander & Marquez Mendez, Andrea Janet.
 
 //importa el schema y modelo de moongose
-const {Schema, model} = require('mongoose');
+const {Schema, model, SchemaTypes} = require('mongoose');
 
 //Crea un schema para mongodb
-const CarScheduleUsersSchema = new Schema({
-    day: {
+const CarScheduleUserSchema = new Schema({
+    dayDate: {
         type: Date,
         required: true
     },
-    drivers_per_cars_id:  {
+    dayString: {
         type: String,
         required: true
+    },
+    driver_per_car_id:  {
+        type: SchemaTypes.ObjectId,
+        required: true,
+        ref: "DriverPerCar"
     },
     pick_hour:  {
         type: Date,
         required: true
     },
-    user_id:  {
-        type: String,
-        required: true
+    user_id: {
+        type: SchemaTypes.ObjectId,
+        required: true,
+        ref: "User"
     }
 },
 {
@@ -30,5 +36,5 @@ const CarScheduleUsersSchema = new Schema({
 
 
 //crea un modelo con el nombre elegido y la coleccion donde se guardará
-module.exports = model('CarScheduleUsers', CarScheduleUsersSchema, 'carSchedulesUsers');
+module.exports = model('CarScheduleUser', CarScheduleUserSchema, 'carSchedulesUser');
 

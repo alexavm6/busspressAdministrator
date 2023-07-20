@@ -3,15 +3,53 @@
 
 
 
-<main class="ajuste">
-    <div class="jumbotron mt-4">
-        
-        <a href="/dashboard/firstSteps"><button type="button" class="btn btn-info">Primeros pasos</button></a>
+<section class="card ajuste">
+<div class="card-body">
+    <h1>Dashboard</h1>
+    
 
-        <p>{{user_global}}</p>
-        
-
+    <p></p>
+    
+    <div class="card-deck">
+    <div class="card">
+        <img class="card-img-top" src="/img/usuario.jpg" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Información Global de Usuarios</h5>
+        <p class="card-text">Usuarios Subidos: {{institutionStudents}}</p>
+        <p class="card-text">Usuarios Inscritos: {{users}}</p>
+        </div>
     </div>
-</main>
+    <div class="card">
+        <img class="card-img-top" src="/img/personal.png" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Información Global del Personal</h5>
+        <p class="card-text">Carros: {{institutionCars}}</p>
+        <p class="card-text">Conductores: {{driversInService}}</p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="/img/institucional.png" alt="Card image cap">
+        <div class="card-body">
+        <h5 class="card-title">Información del Administrador</h5>
+        <p class="card-text">Usuario: {{user_global.user}}</p>
+        <p class="card-text">Nombre: {{user_global.names}}, {{user_global.last_names}}</p>
+        <p class="card-text">Correo: {{user_global.email}}</p>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+
+</div>
+</section>
+
+
 
 

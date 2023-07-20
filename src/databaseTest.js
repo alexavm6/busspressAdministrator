@@ -28,7 +28,39 @@ console.log(fechaCompleta);
 
 
 
+try {
 
+    const Administrator = require('./models/Administrator.js');
+
+    async function createAdministrator() {
+
+        const newAdministrator = new Administrator({
+            user: "A2",
+            document_type: "DNI",
+            document_number: "12345678",
+            names: "Renata William",
+            last_names: "Golla Rojas",
+            email: "renata@gmail.com",
+            password: "111111111",
+            address: "San Martin de Porres",
+            phone_number: "123456789",
+            gender: "F",
+            age: 29,
+        });
+        
+        newAdministrator.password = await newAdministrator.encryptPassword("11111111");
+        await newAdministrator.save();
+        console.log(newAdministrator);
+
+    }
+
+    createAdministrator();
+
+} catch (e) {
+
+    console.log(e);
+
+}
 
 
 /*

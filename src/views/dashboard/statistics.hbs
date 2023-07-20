@@ -1,13 +1,54 @@
 <! ––Autores: Vasquez Miguel, Alexandra Ivana & Barandiaran Japaja, Jhossepy Alexander & Marquez Mendez, Andrea Janet.––>
 <! ––muestra estadisticas del usuario––>
 
-<main class="ajuste">
-    <div class="jumbotron mt-4">
-        
-        <a href="/dashboard/firstSteps"><button type="button" class="btn btn-info">Primeros pasos</button></a>
+<section class="card ajuste">
+<div class="card-body">
 
-        <p>{{user_global}}</p>
-        
+    <h1>Estadísticas Globales</h1>
 
+    <div class="col-8 offset-2 my-5">
+        <div class="card">
+            <div class="card-body">
+                <h5>Gráfico 1: Puntaje por conductor</h5>
+                <hr>
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
     </div>
-</main>
+
+    <br>
+
+    <div class="col-8 offset-2 my-5">
+        <div class="card">
+            <div class="card-body">
+                <h5>Gráfico 2: Nuevos usuarios por mes</h5>
+                <hr>
+                <canvas id="myChart2"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8 offset-2 my-5">
+        <div class="card">
+            <div class="card-body">
+                <h5>Gráfico 3: Nivel de satisfacción en el viaje</h5>
+                <hr>
+                <canvas id="myChart3"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-8 offset-2 my-5">
+        <div class="card">
+            <div class="card-body">
+                <h5>Gráfico 4: Control de viajes</h5>
+                <hr>
+                <canvas id="myChart4"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+</section>

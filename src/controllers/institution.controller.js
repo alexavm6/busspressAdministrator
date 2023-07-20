@@ -110,7 +110,7 @@ institutionCtrl.signupForm1 = async (req, res) => {
 //si el ingreso de sesion es exitoso o falla te redirige a una vista diferente
 institutionCtrl.signupForm2 = async (req, res) => {
 
-    const {name, acronym, ruc, email, user, password} = req.body;
+    const {name, acronym, ruc, email, user, password, card} = req.body;
 
     console.log(req.body,semanasGlobal, ciclosGlobal, carrosGlobal,institutionRegistrationPriceGlobal, totalPorCantidadDeCarrosGlobal, totalSemanasDelServicioGlobal, totalGlobal);
     
@@ -175,9 +175,11 @@ institutionCtrl.signupForm2 = async (req, res) => {
 
     const contentHTML = `
         <h1>Tu institución ha sido registrada correctamente</h1>
+        <p>Este es tu recibo electrónico<p>
+        <p>Tu contraseña es la que ingresaste al inscribirte</p>
         <p></p>
         <ul>
-            <li>Monto total: S/.${totalGlobal}</li>
+            <li>Monto total: S/.${totalGlobal} cargado a la tarjeta ${card}</li>
             <li>${descriptions[0]}: S/.${amounts[0]}</li>
             <li>${descriptions[1]}: S/.${amounts[1]}</li>
             <li>${descriptions[2]}: S/.${amounts[2]}</li>
@@ -251,6 +253,7 @@ institutionCtrl.signupForm2 = async (req, res) => {
             phone_number: driver.phone_number,
             gender: driver.gender,
             age: driver.age,
+            score: 0,
             institution_id: institution_id
         });
 
