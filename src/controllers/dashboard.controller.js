@@ -162,7 +162,7 @@ dashboardCtrl.renderFirstSteps = async (req, res) => {
                 const newCarScheduleUser = new CarScheduleUser({
                     day: classSchedule.day,
                     pick_hour: new Date(),
-                    driver_per_cars_id: "65a2986034b1492e3c96b00c",
+                    driver_per_cars_id: "64b8a653c8093204607ce311",
                     user_id: user._id
                 });
                 
